@@ -53,27 +53,27 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo {
   font-weight: 700;
   font-size: 1.5rem;
-  color: #FF5A1F;
+  color: #633693;
 }
 
 .btn-primary {
-  background-color: #FF5A1F;
-  border-color: #FF5A1F;
+  background-color: #633693;
+  border-color: #633693;
 }
 
 .btn-primary:hover {
-  background-color: #e64c17;
-  border-color: #e64c17;
+  background-color: #633693;
+  border-color: #633693;
 }
 
 .btn-outline-primary {
-  color: #FF5A1F;
-  border-color: #FF5A1F;
+  color: #633693;
+  border-color: #633693;
 }
 
 .btn-outline-primary:hover {
-  background-color: #FF5A1F;
-  border-color: #FF5A1F;
+  background-color: #633693;
+  border-color: #633693;
 }
 
 .header-icon {
@@ -160,11 +160,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checkout-step.active {
-  border: 2px solid #FF5A1F;
+  border: 2px solid #633693;
 }
 
 .step-number {
-  background-color: #FF5A1F;
+  background-color: #633693;
   color: white;
   width: 30px;
   height: 30px;
