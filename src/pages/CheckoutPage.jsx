@@ -67,7 +67,7 @@ const CheckoutPage = () => {
     clearCart();
     
     // Redirect to order confirmation page
-    navigate(`/order-confirmation/${orderId}`);
+    navigate(`/order-confirmation/₹{orderId}`);
   };
   
   if (cart.items.length === 0) {
@@ -90,7 +90,7 @@ const CheckoutPage = () => {
                   <label htmlFor="name" className="form-label">Full Name</label>
                   <input
                     type="text"
-                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.name ? 'is-invalid' : ''}`}
                     id="name"
                     name="name"
                     value={formData.name}
@@ -103,7 +103,7 @@ const CheckoutPage = () => {
                   <label htmlFor="phone" className="form-label">Phone Number</label>
                   <input
                     type="tel"
-                    className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.phone ? 'is-invalid' : ''}`}
                     id="phone"
                     name="phone"
                     value={formData.phone}
@@ -116,7 +116,7 @@ const CheckoutPage = () => {
                   <label htmlFor="address" className="form-label">Delivery Address</label>
                   <input
                     type="text"
-                    className={`form-control ${errors.address ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.address ? 'is-invalid' : ''}`}
                     id="address"
                     name="address"
                     value={formData.address}
@@ -218,7 +218,7 @@ const CheckoutPage = () => {
               {cart.items.map(item => (
                 <div key={item.id} className="d-flex justify-content-between mb-2">
                   <span>{item.quantity} × {item.name}</span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>₹{(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
               
@@ -226,20 +226,20 @@ const CheckoutPage = () => {
               
               <div className="d-flex justify-content-between mb-2">
                 <span>Items Total</span>
-                <span>${cart.totalAmount.toFixed(2)}</span>
+                <span>₹{cart.totalAmount.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-2">
                 <span>Tax</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>₹{tax.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-3">
                 <span>Delivery Fee</span>
-                <span>${deliveryFee.toFixed(2)}</span>
+                <span>₹{deliveryFee.toFixed(2)}</span>
               </div>
               <hr />
               <div className="d-flex justify-content-between">
                 <strong>Total</strong>
-                <strong>${total.toFixed(2)}</strong>
+                <strong>₹{total.toFixed(2)}</strong>
               </div>
             </div>
           </div>

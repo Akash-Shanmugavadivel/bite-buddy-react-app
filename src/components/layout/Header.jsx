@@ -29,7 +29,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            <span className="nav-logo">Bite Buddy</span>
+            <span className="nav-logo">Starry Foods</span>
           </Link>
           
           <button 

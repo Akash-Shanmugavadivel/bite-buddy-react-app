@@ -91,7 +91,7 @@ const SignupPage = () => {
                   <label htmlFor="name" className="form-label">Full Name</label>
                   <input
                     type="text"
-                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.name ? 'is-invalid' : ''}`}
                     id="name"
                     name="name"
                     value={formData.name}
@@ -105,7 +105,7 @@ const SignupPage = () => {
                   <label htmlFor="email" className="form-label">Email address</label>
                   <input
                     type="email"
-                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.email ? 'is-invalid' : ''}`}
                     id="email"
                     name="email"
                     value={formData.email}
@@ -119,7 +119,7 @@ const SignupPage = () => {
                   <label htmlFor="password" className="form-label">Password</label>
                   <input
                     type="password"
-                    className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.password ? 'is-invalid' : ''}`}
                     id="password"
                     name="password"
                     value={formData.password}
@@ -133,7 +133,7 @@ const SignupPage = () => {
                   <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
                   <input
                     type="password"
-                    className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+                    className={`form-control ₹{errors.confirmPassword ? 'is-invalid' : ''}`}
                     id="confirmPassword"
                     name="confirmPassword"
                     value={formData.confirmPassword}

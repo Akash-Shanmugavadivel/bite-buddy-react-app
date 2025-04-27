@@ -30,7 +30,7 @@ const LoginPage = () => {
     
     if (success) {
       // Redirect after successful login
-      navigate(redirectPath === 'checkout' ? '/checkout' : `/${redirectPath}`);
+      navigate(redirectPath === 'checkout' ? '/checkout' : `/₹{redirectPath}`);
     } else {
       setError('Invalid credentials. Please try again.');
     }

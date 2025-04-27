@@ -26,7 +26,7 @@ const CartItem = ({ item }) => {
         <div className="col-6 col-md-7">
           <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
-            <p className="card-text text-primary mb-0">${item.price.toFixed(2)}</p>
+            <p className="card-text text-primary mb-0">₹{item.price.toFixed(2)}</p>
           </div>
         </div>
         <div className="col-3 col-md-3">

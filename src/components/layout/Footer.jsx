@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         
         <div className="text-center mt-4">
-          <p className="mb-0">&copy; 2023 Bite Buddy. All rights reserved.</p>
+          <p className="mb-0">&copy; 2023Starry Foods. All rights reserved.</p>
         </div>
       </div>
     </footer>

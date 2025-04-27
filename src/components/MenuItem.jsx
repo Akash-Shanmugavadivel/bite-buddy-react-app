@@ -23,7 +23,7 @@ const MenuItem = ({ item, restaurant }) => {
           <div className="card-body">
             <div className="d-flex justify-content-between">
               <h5 className="card-title">{item.name}</h5>
-              <span className="text-primary fw-bold">${item.price.toFixed(2)}</span>
+              <span className="text-primary fw-bold">₹{item.price.toFixed(2)}</span>
             </div>
             <p className="card-text text-muted small">{item.description}</p>
             <button 

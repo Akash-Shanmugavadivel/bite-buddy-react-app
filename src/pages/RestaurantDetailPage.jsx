@@ -100,8 +100,8 @@ const RestaurantDetailPage = () => {
               <h4 className="card-title">Restaurant Info</h4>
               <hr />
               <p><strong>Address:</strong> {restaurant.address}</p>
-              <p><strong>Delivery Fee:</strong> ${restaurant.deliveryFee.toFixed(2)}</p>
-              <p><strong>Minimum Order:</strong> ${restaurant.minOrder.toFixed(2)}</p>
+              <p><strong>Delivery Fee:</strong> ₹{restaurant.deliveryFee.toFixed(2)}</p>
+              <p><strong>Minimum Order:</strong> ₹{restaurant.minOrder.toFixed(2)}</p>
               <p><strong>Delivery Time:</strong> {restaurant.deliveryTime} min</p>
             </div>
           </div>

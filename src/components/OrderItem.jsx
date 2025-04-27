@@ -33,13 +33,13 @@ const OrderItem = ({ order }) => {
           {order.items.map((item) => (
             <div key={item.id} className="d-flex justify-content-between py-1 border-bottom">
               <span>{item.quantity} × {item.name}</span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
+              <span>₹{(item.price * item.quantity).toFixed(2)}</span>
             </div>
           ))}
         </div>
         <div className="d-flex justify-content-between font-weight-bold">
           <strong>Total</strong>
-          <strong>${order.total.toFixed(2)}</strong>
+          <strong>{order.total.toFixed(2)}</strong>
         </div>
         <p className="mt-2 mb-0 text-muted small">
           Delivered to: {order.deliveryAddress}
