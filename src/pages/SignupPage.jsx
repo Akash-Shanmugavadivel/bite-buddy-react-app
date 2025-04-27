@@ -154,6 +154,9 @@ const SignupPage = () => {
                 <p className="mb-0">
                   Already have an account? <Link to="/login">Log in</Link>
                 </p>
+                 <p className="mb-0">
+                   Forgot password? <Link to="/forgotpassword">Forgot Password</Link>
+                   </p>
               </div>
             </div>
           </div>

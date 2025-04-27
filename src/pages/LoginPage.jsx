@@ -86,6 +86,9 @@ const LoginPage = () => {
                 <p className="mb-0">
                   Don't have an account? <Link to="/signup">Sign up</Link>
                 </p>
+                <p className="mb-0">
+                 Forgot password? <Link to="/forgotpassword">Forgot Password</Link>
+                </p>
               </div>
               
               <div className="text-center mt-3">
