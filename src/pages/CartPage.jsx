@@ -71,20 +71,20 @@ const CartPage = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mb-2">
                 <span>Items Total</span>
-                <span>${cart.totalAmount.toFixed(2)}</span>
+                <span>₹{cart.totalAmount.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-2">
-                <span>Tax</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>Tax (5% GST)</span>
+                <span>₹{tax.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-3">
                 <span>Delivery Fee</span>
-                <span>${deliveryFee.toFixed(2)}</span>
+                <span>₹{deliveryFee.toFixed(2)}</span>
               </div>
               <hr />
               <div className="d-flex justify-content-between mb-3">
                 <strong>Total</strong>
-                <strong>${totalWithTaxAndDelivery.toFixed(2)}</strong>
+                <strong>₹{totalWithTaxAndDelivery.toFixed(2)}</strong>
               </div>
               
               <button 

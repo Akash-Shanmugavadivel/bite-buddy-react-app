@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
@@ -18,9 +17,8 @@ const CheckoutPage = () => {
   });
   const [errors, setErrors] = useState({});
   
-  // Calculate order totals
   const deliveryFee = cart.restaurant ? cart.restaurant.deliveryFee : 0;
-  const tax = cart.totalAmount * 0.1; // 10% tax
+  const tax = cart.totalAmount * 0.05; // 5% GST
   const total = cart.totalAmount + tax + deliveryFee;
   
   const handleChange = (e) => {
@@ -29,7 +27,6 @@ const CheckoutPage = () => {
       ...formData,
       [name]: value
     });
-    // Clear error when field is edited
     setErrors({
       ...errors,
       [name]: ''
@@ -52,7 +49,6 @@ const CheckoutPage = () => {
     
     if (!validateForm()) return;
     
-    // In a real app, this would send the order to an API
     console.log('Order submitted:', {
       customer: formData,
       items: cart.items,
@@ -60,13 +56,10 @@ const CheckoutPage = () => {
       total
     });
     
-    // Generate random order ID for this demo
     const orderId = Math.floor(100000 + Math.random() * 900000);
     
-    // Clear the cart
     clearCart();
     
-    // Redirect to order confirmation page
     navigate(`/order-confirmation/${orderId}`);
   };
   
@@ -218,7 +211,7 @@ const CheckoutPage = () => {
               {cart.items.map(item => (
                 <div key={item.id} className="d-flex justify-content-between mb-2">
                   <span>{item.quantity} × {item.name}</span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>₹{(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
               
@@ -226,20 +219,26 @@ const CheckoutPage = () => {
               
               <div className="d-flex justify-content-between mb-2">
                 <span>Items Total</span>
-                <span>${cart.totalAmount.toFixed(2)}</span>
+                <span>₹{cart.totalAmount.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-2">
-                <span>Tax</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>GST (5%)</span>
+                <span>₹{tax.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-3">
                 <span>Delivery Fee</span>
-                <span>${deliveryFee.toFixed(2)}</span>
+                <span>₹{deliveryFee.toFixed(2)}</span>
               </div>
               <hr />
               <div className="d-flex justify-content-between">
                 <strong>Total</strong>
-                <strong>${total.toFixed(2)}</strong>
+                <strong>₹{total.toFixed(2)}</strong>
+              </div>
+              
+              <div className="mt-3">
+                <p className="small text-muted mb-0">
+                  * All prices are inclusive of GST
+                </p>
               </div>
             </div>
           </div>
