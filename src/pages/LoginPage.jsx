@@ -13,7 +13,7 @@ const LoginPage = () => {
   
   // Check if there's a redirect parameter
   const params = new URLSearchParams(location.search);
-  const redirectPath = params.get('redirect') || '/';
+  const redirectPath = params.get('redirect') || '';
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ const LoginPage = () => {
     
     if (success) {
       // Redirect after successful login
-      navigate(redirectPath === 'checkout' ? '/checkout' : `/₹{redirectPath}`);
+      navigate(redirectPath === 'checkout' ? '/checkout' : `/${redirectPath}`);
     } else {
       setError('Invalid credentials. Please try again.');
     }

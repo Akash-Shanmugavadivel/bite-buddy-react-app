@@ -26,33 +26,47 @@ const SignupPage = () => {
       [name]: ''
     });
   };
-  
   const validateForm = () => {
     const newErrors = {};
-    
+  
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+  
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    
+  
     if (!formData.password) {
       newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
+    } else {
+      if (formData.password.length < 6) {
+        newErrors.password = 'Password must be at least 6 characters';
+      }
+      if (!/[A-Z]/.test(formData.password)) {
+        newErrors.password = 'Password must contain at least one uppercase letter';
+      }
+      if (!/[a-z]/.test(formData.password)) {
+        newErrors.password = 'Password must contain at least one lowercase letter';
+      }
+      if (!/[0-9]/.test(formData.password)) {
+        newErrors.password = 'Password must contain at least one number';
+      }
+      if (!/[!@#$%^&*(),.?":{}|<>]/.test(formData.password)) {
+        newErrors.password = 'Password must contain at least one special character';
+      }
     }
-    
+  
     if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match';
     }
-    
+  
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -91,7 +105,7 @@ const SignupPage = () => {
                   <label htmlFor="name" className="form-label">Full Name</label>
                   <input
                     type="text"
-                    className={`form-control ₹{errors.name ? 'is-invalid' : ''}`}
+                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                     id="name"
                     name="name"
                     value={formData.name}
@@ -105,7 +119,7 @@ const SignupPage = () => {
                   <label htmlFor="email" className="form-label">Email address</label>
                   <input
                     type="email"
-                    className={`form-control ₹{errors.email ? 'is-invalid' : ''}`}
+                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                     id="email"
                     name="email"
                     value={formData.email}
@@ -119,7 +133,7 @@ const SignupPage = () => {
                   <label htmlFor="password" className="form-label">Password</label>
                   <input
                     type="password"
-                    className={`form-control ₹{errors.password ? 'is-invalid' : ''}`}
+                    className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                     id="password"
                     name="password"
                     value={formData.password}
@@ -133,7 +147,7 @@ const SignupPage = () => {
                   <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
                   <input
                     type="password"
-                    className={`form-control ₹{errors.confirmPassword ? 'is-invalid' : ''}`}
+                    className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
                     id="confirmPassword"
                     name="confirmPassword"
                     value={formData.confirmPassword}

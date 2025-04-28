@@ -19,7 +19,7 @@ const CartPage = () => {
   };
   
   const deliveryFee = cart.restaurant ? cart.restaurant.deliveryFee : 0;
-  const tax = cart.totalAmount * 0.1; // 10% tax
+  const tax = cart.totalAmount * 0.1;
   const totalWithTaxAndDelivery = cart.totalAmount + tax + deliveryFee;
   
   if (cart.items.length === 0) {
@@ -71,10 +71,11 @@ const CartPage = () => {
             <div className="card-body">
               <div className="d-flex justify-content-between mb-2">
                 <span>Items Total</span>
-                <span>₹{cart.totalAmount.toFixed(2)}</span>
+                <span>          {cart.totalAmount.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-2">
                 <span>Tax</span>
+                <span>Tax (5% GST)</span>
                 <span>₹{tax.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-3">

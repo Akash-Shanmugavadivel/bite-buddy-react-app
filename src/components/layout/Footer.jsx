@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3 mb-4 mb-md-0">
-            <h5>Bite Buddy</h5>
+            <h5>Starry Foods</h5>
             <p className="text-muted">
               The best food, delivered to your doorstep.
             </p>
@@ -34,14 +34,14 @@ const Footer = () => {
           <div className="col-md-3">
             <h5>Contact</h5>
             <ul className="list-unstyled">
-              <li><a href="mailto:info@bitebuddy.com" className="text-reset">info@bitebuddy.com</a></li>
-              <li><a href="tel:+11234567890" className="text-reset">+1 (123) 456-7890</a></li>
+              <li><a href="mailto:info@starryfoods.com" className="text-reset">info@starryfoods.com</a></li>
+              <li><a href="tel:+11234567890" className="text-reset">+91 97893 59530</a></li>
             </ul>
           </div>
         </div>
         
         <div className="text-center mt-4">
-          <p className="mb-0">&copy; 2023Starry Foods. All rights reserved.</p>
+          <p className="mb-0">&copy; 2025 Starry Foods. All rights reserved.</p>
         </div>
       </div>
     </footer>

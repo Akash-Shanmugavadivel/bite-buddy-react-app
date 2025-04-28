@@ -25,10 +25,10 @@ export function AuthProvider({ children }) {
       // Just for demo - create a mock user object
       const mockUser = {
         id: '123',
-        name: 'John Doe',
+        name: 'Akash S',
         email: email,
-        phone: '123-456-7890',
-        address: '123 Main St, Anytown, USA'
+        phone: '9876543210',
+        address: 'DCL LAB 2nd floor, GJ park building, Department of Computer Science, MIT Chromepet',
       };
       setUser(mockUser);
       return true;
@@ -39,7 +39,6 @@ export function AuthProvider({ children }) {
   const signup = (name, email, password) => {
     // Simple validation
     if (name && email && password) {
-      // Just for demo - create a mock user object
       const mockUser = {
         id: '123',
         name: name,

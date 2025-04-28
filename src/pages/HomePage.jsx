@@ -29,7 +29,7 @@ const HomePage = () => {
             {foodCategories.map((category) => (
               <div key={category.id} className="col-4 col-md-2">
                 <Link 
-                  to={`/restaurants?category=₹{category.name}`} 
+                  to={`/restaurants?category=${category.name}`} 
                   className="text-decoration-none"
                 >
                   <div className="category-item">
